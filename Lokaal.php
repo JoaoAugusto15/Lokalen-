@@ -20,13 +20,17 @@ $lokalen = [
     ]
 
 ];
-
-foreach ($lokalen as $lokaal) {
-    echo "<ul>";
+echo "<ul>";
 
 
-    echo $lokaal["lokaalnaam"] . "  ". $lokaal["capaciteit"]  . "mensen";
+foreach ($lokalen as $key => $lokaal) {
+
+    echo "<li>";
+ 
+    echo sprintf("%s - Capaciteit: %d mensen", $lokaal["lokaalnaam"], $lokaal["capaciteit"]);
+
+    echo "</li>";
 }
-echo "</ul>";
 
+echo "</ul>";
 ?>
